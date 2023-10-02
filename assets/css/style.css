@@ -191,7 +191,7 @@ i {
     padding-right:45px;
 }
 
-.msgSendReceived.clearfix {
+.message.clearfix {
     content: "";
     clear: both;
     display: table;

@@ -63,7 +63,7 @@
 
                     <!-- CONTATTO -->
                     <div v-for="contact in contacts" class="contact">
-                        <img :src="" alt="">
+                        <img :src="`assets/`+ contact.avatar" alt="">
                         <div class="infoContact">
                             <p id="name" class="name">{{contact.name}}</p>
                             <p id="lastMessage" class="lastMessage">Ultimo messaggio inviato</p>

@@ -205,6 +205,7 @@ i {
     padding-bottom: 3px;
     margin: 10px;
     border-radius: 5px;
+    min-width: 200px;
 }
 
 .msg.send {
@@ -214,6 +215,7 @@ i {
 
 .msg.received {
     background-color: white;
+    float: left;
 }
 
 .msg p:last-child {

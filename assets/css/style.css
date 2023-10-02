@@ -1,7 +1,7 @@
 /*************************************************
     GENERAL STYLES
  *************************************************/
- * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +12,7 @@
     UTILITIES
  ************************************************/
 
- .container {
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -31,3 +31,45 @@
 /************************************************
     SITE SECTIONS
  ************************************************/
+
+
+.bolzapp {
+    display: flex;
+    margin-top: 100px;
+    height: 600px;
+}
+
+.contacts {
+    width: 40%;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.message {
+    overflow-y: scroll;
+    height: calc(100% - 100px);
+}
+
+.topContacts,
+.topMessages,
+.writeMessages {
+    height: 50px;
+}
+
+.notifications {
+    height: 60px;
+}
+
+.searchBar {
+    height: 35px;
+}
+
+.listContacts {
+    height: calc(100% - 145px);
+    overflow-y: scroll;
+}

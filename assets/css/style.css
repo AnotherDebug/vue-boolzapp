@@ -7,6 +7,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #d9dbd4;
+}
+
+i {
+    color: gray;
+}
 
 /************************************************
     UTILITIES
@@ -35,14 +42,134 @@
 
 .bolzapp {
     display: flex;
-    margin-top: 100px;
+    margin-top: 50px;
     height: 600px;
 }
 
+/* CONTATTI */
 .contacts {
     width: 40%;
 }
 
+.topContacts {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 5px;
+    background-color: #eaeaea;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.image img {
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons i {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.notifications {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 10px;
+    background-color: #8edafc;
+}
+
+.notiIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: white;
+}
+
+.notiIcon i {
+    color: #8edafc;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 5px;
+    position: relative;
+    background-color: #eaeaea;
+}
+
+.searchBar input {
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+    border-radius: 5px;
+    border-color: white;
+}
+
+.searchBar i {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+
+.listContacts {
+    height: calc(100% - 145px);
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background-color: #e9ebeb;
+}
+
+.contact img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.infoContact {
+    margin-left: 15px;
+    width: 50%;
+}
+
+.infoContact p:first-child {
+    font-weight: 600;
+}
+
+.infoContact p:last-child {
+    font-size: 12px;
+}
+
+.TimeMsgReceived {
+    width: 20%;
+    text-align: end;
+}
+
+/* MESSAGGI */
 .messages {
     display: flex;
     flex-direction: column;
@@ -55,21 +182,10 @@
     height: calc(100% - 100px);
 }
 
-.topContacts,
+
 .topMessages,
 .writeMessages {
     height: 50px;
+    padding: 5px;
 }
 
-.notifications {
-    height: 60px;
-}
-
-.searchBar {
-    height: 35px;
-}
-
-.listContacts {
-    height: calc(100% - 145px);
-    overflow-y: scroll;
-}

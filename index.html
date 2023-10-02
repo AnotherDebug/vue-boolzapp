@@ -62,106 +62,10 @@
                 <div class="listContacts">
 
                     <!-- CONTATTO -->
-                    <div class="contact">
-                        <img src="assets/img/avatar_1.jpg" alt="">
+                    <div v-for="contact in contacts" class="contact">
+                        <img :src="" alt="">
                         <div class="infoContact">
-                            <p id="name" class="name">Michele</p>
-                            <p id="lastMessage" class="lastMessage">Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="TimeMsgReceived">
-                            <p id="time" class="time">12:00</p>
-                        </div>
-                    </div>
-
-                    <!-- CONTATTO -->
-                    <div class="contact">
-                        <img src="assets/img/avatar_1.jpg" alt="">
-                        <div class="infoContact">
-                            <p id="name" class="name">Michele</p>
-                            <p id="lastMessage" class="lastMessage">Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="TimeMsgReceived">
-                            <p id="time" class="time">12:00</p>
-                        </div>
-                    </div>
-
-                    <!-- CONTATTO -->
-                    <div class="contact">
-                        <img src="assets/img/avatar_1.jpg" alt="">
-                        <div class="infoContact">
-                            <p id="name" class="name">Michele</p>
-                            <p id="lastMessage" class="lastMessage">Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="TimeMsgReceived">
-                            <p id="time" class="time">12:00</p>
-                        </div>
-                    </div>
-
-                    <!-- CONTATTO -->
-                    <div class="contact">
-                        <img src="assets/img/avatar_1.jpg" alt="">
-                        <div class="infoContact">
-                            <p id="name" class="name">Michele</p>
-                            <p id="lastMessage" class="lastMessage">Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="TimeMsgReceived">
-                            <p id="time" class="time">12:00</p>
-                        </div>
-                    </div>
-
-                    <!-- CONTATTO -->
-                    <div class="contact">
-                        <img src="assets/img/avatar_1.jpg" alt="">
-                        <div class="infoContact">
-                            <p id="name" class="name">Michele</p>
-                            <p id="lastMessage" class="lastMessage">Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="TimeMsgReceived">
-                            <p id="time" class="time">12:00</p>
-                        </div>
-                    </div>
-
-                    <!-- CONTATTO -->
-                    <div class="contact">
-                        <img src="assets/img/avatar_1.jpg" alt="">
-                        <div class="infoContact">
-                            <p id="name" class="name">Michele</p>
-                            <p id="lastMessage" class="lastMessage">Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="TimeMsgReceived">
-                            <p id="time" class="time">12:00</p>
-                        </div>
-                    </div>
-
-                    <!-- CONTATTO -->
-                    <div class="contact">
-                        <img src="assets/img/avatar_1.jpg" alt="">
-                        <div class="infoContact">
-                            <p id="name" class="name">Michele</p>
-                            <p id="lastMessage" class="lastMessage">Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="TimeMsgReceived">
-                            <p id="time" class="time">12:00</p>
-                        </div>
-                    </div>
-
-                    <!-- CONTATTO -->
-                    <div class="contact">
-                        <img src="assets/img/avatar_1.jpg" alt="">
-                        <div class="infoContact">
-                            <p id="name" class="name">Michele</p>
-                            <p id="lastMessage" class="lastMessage">Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="TimeMsgReceived">
-                            <p id="time" class="time">12:00</p>
-                        </div>
-                    </div>
-
-                    <!-- CONTATTO -->
-                    <div class="contact">
-                        <img src="assets/img/avatar_1.jpg" alt="">
-                        <div class="infoContact">
-                            <p id="name" class="name">Michele</p>
+                            <p id="name" class="name">{{contact.name}}</p>
                             <p id="lastMessage" class="lastMessage">Ultimo messaggio inviato</p>
                         </div>
                         <div class="TimeMsgReceived">

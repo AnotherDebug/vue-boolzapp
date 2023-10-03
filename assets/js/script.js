@@ -39,7 +39,7 @@ createApp({
         {
           name: "Michele",
           avatar: "./img/avatar_1.jpg",
-          visible: true,
+          visible: false,
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -199,16 +199,31 @@ createApp({
         },
       ],
       contattoAttivo: null,
+      newMessage: {
+        date: "03/10/2023 14:03:22",
+        message: "",
+        status: "sent",
+      },
+      
     };
   },
   methods: {
-    
+    addNewMessage(index) {
+      this.contattoAttivo.push(this.newMessage); 
+      this.newMessage = {
+        date: "03/10/2023 14:03:22",
+        message: "",
+        status: "sent",
+      };
+    },
   },
   created() {
     this.contattoAttivo = this.contacts[0];
   },
   mounted() {
     console.log("prova");
-    
-  }
+    console.log(this.newMessage);
+    console.log(this.newMessage.message);
+    console.log(this.contacts[0].messages);
+  },
 }).mount(".bolzapp");

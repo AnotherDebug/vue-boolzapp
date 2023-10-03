@@ -199,22 +199,30 @@ createApp({
         },
       ],
       contattoAttivo: null,
-      newMessage: {
+      newSentMessage: {
         date: "03/10/2023 14:03:22",
         message: "",
         status: "sent",
       },
+      newReceiveMessage: {
+        date: "03/10/2023 14:03:22",
+        message: "Ok!",
+        status: "received",
+      }
       
     };
   },
   methods: {
     addNewMessage() {
-      this.contattoAttivo.messages.push(this.newMessage); 
-      this.newMessage = {
+      this.contattoAttivo.messages.push(this.newSentMessage); 
+      this.newSentMessage = {
         date: "03/10/2023 14:03:22",
         message: "",
         status: "sent",
       };
+      setTimeout(() =>{
+        this.contattoAttivo.messages.push(this.newReceiveMessage);
+      },1000);
     },
   },
   created() {

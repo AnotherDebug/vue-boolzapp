@@ -62,7 +62,7 @@
                 <div class="listContacts">
 
                     <!-- CONTATTO -->
-                    <div @click="contattoAttivo = contact" v-for="contact in contacts" class="contact">
+                    <div @click="contattoAttivo = contact" v-for="contact in contacts" class="contact" :class="contattoAttivo.visible === false ? 'hide' : ''">
                         <img :src="`assets/`+ contact.avatar" alt="">
                         <div class="infoContact">
                             <p id="name" class="name">{{contact.name}}</p>

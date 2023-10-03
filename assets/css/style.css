@@ -179,9 +179,6 @@ i {
     justify-content: space-between;
     width: 60%;
 }
-.messages.hide {
-    display: none;
-}
 
 .message {
     overflow-y: scroll;

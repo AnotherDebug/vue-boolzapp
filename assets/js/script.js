@@ -208,7 +208,7 @@ createApp({
     };
   },
   methods: {
-    addNewMessage(index) {
+    addNewMessage() {
       this.contattoAttivo.push(this.newMessage); 
       this.newMessage = {
         date: "03/10/2023 14:03:22",

@@ -198,9 +198,17 @@ createApp({
           ],
         },
       ],
+      contattoAttivo: null,
     };
+  },
+  methods: {
+    
+  },
+  created() {
+    this.contattoAttivo = this.contacts[0];
   },
   mounted() {
     console.log("prova");
+    
   }
 }).mount(".bolzapp");

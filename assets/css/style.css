@@ -145,6 +145,10 @@ i {
     cursor: pointer;
 }
 
+.contact.hide {
+    display: none;
+}
+
 .contact:hover {
     background-color: #e9ebeb;
 }

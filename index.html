@@ -93,7 +93,7 @@
                 </div>
                 <div class="message">
 
-                    <div v-for="message in contattoAttivo.messages" class="msg">
+                    <div v-for="message in contattoAttivo.messages" class="msg" :class="(message.status === 'sent')? 'send' : 'received' ">
                         <p>{{message.message}}</p>
                         <p>15:30</p>
                     </div>

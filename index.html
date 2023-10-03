@@ -57,7 +57,7 @@
                 </div>
                 <div class="searchBar">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" id="searchChat" name="searchChat" placeholder="Cerca o inizia una nuova chat">
+                    <input @keyup.enter="findContact" v-model="catchString" type="search" id="searchChat" name="searchChat" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <div class="listContacts">
 

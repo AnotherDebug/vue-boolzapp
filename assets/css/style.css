@@ -135,6 +135,8 @@ i {
     background-color: white;
 }
 
+/* CONTATTO */
+
 .contact {
     display: flex;
     justify-content: space-around;
@@ -170,6 +172,7 @@ i {
     width: 20%;
     text-align: end;
     color: gray;
+    font-size: 8px;
 }
 
 /* MESSAGGI */

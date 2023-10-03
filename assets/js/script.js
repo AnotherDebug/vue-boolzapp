@@ -208,21 +208,25 @@ createApp({
         date: "03/10/2023 14:03:22",
         message: "Ok!",
         status: "received",
-      }
-      
+      },
+      catchString: "",
     };
   },
   methods: {
     addNewMessage() {
-      this.contattoAttivo.messages.push(this.newSentMessage); 
+      this.contattoAttivo.messages.push(this.newSentMessage);
       this.newSentMessage = {
         date: "03/10/2023 14:03:22",
         message: "",
         status: "sent",
       };
-      setTimeout(() =>{
+      setTimeout(() => {
         this.contattoAttivo.messages.push(this.newReceiveMessage);
-      },1000);
+      }, 1000);
+    },
+    findContact() {
+      console.log(this.catchString);
+      this.contacts.filter(contact => contact.name.toLowerCase().includes(this.catchString.toLowerCase()));
     },
   },
   created() {
@@ -230,8 +234,6 @@ createApp({
   },
   mounted() {
     console.log("prova");
-    console.log(this.newMessage);
-    console.log(this.newMessage.message);
     console.log(this.contacts[0].messages);
   },
 }).mount(".bolzapp");

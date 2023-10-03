@@ -62,7 +62,7 @@
                 <div class="listContacts">
 
                     <!-- CONTATTO -->
-                    <div v-for="contact in contacts" class="contact">
+                    <div @click="contact.visible = !contact.visible" v-for="contact in contacts" class="contact">
                         <img :src="`assets/`+ contact.avatar" alt="">
                         <div class="infoContact">
                             <p id="name" class="name">{{contact.name}}</p>
@@ -76,12 +76,12 @@
                 </div>
             </div>
             <!-- MESSAGGI -->
-            <div class="messages">
+            <div v-for="(contact, index) in contacts" class="messages" :class="{'hide' : !contact.visible}">
                 <div class="topMessages">
                     <div class="image">
-                        <img src="assets/img/avatar_1.jpg" alt="">
+                        <img :src="`assets/`+ contact.avatar" alt="">
                         <div class="topInfoContact">
-                            <p id="name" class="name">Michele</p>
+                            <p id="name" class="name">{{contact.name}}</p>
                             <p id="lastAccess" class="lastAccess">Ultimo accesso oggi alle 12:00</p>
                         </div>
                     </div>
@@ -93,12 +93,12 @@
                 </div>
                 <div class="message">
 
-                    <div class="msg send">
-                        <p>Hai portato a spasso il cane?</p>
+                    <div v-for="message in contacts[index].messages" class="msg">
+                        <p>{{message.message}}</p>
                         <p>15:30</p>
                     </div>
 
-                    <div class="msg send">
+                    <!-- <div class="msg send">
                         <p>Ricordati di stendere i panni</p>
                         <p>15:30</p>
                     </div>
@@ -106,7 +106,7 @@
                     <div class="msg received">
                         <p>Tutto fatto!</p>
                         <p>15:30</p>
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="writeMessages">

@@ -229,9 +229,13 @@ createApp({
       }, 1000);
     },
 
-    getLastDate(element) {
-      return element.messages.at(-1).date;
-    },
+    getLastDate() {
+  if (this.contattoAttivo.messages.length > 0) {
+    return this.contattoAttivo.messages[this.contattoAttivo.messages.length - 1].date;
+  } else {
+    return "";
+  }
+},
 
     deleteMessage(index) {
       this.contattoAttivo.messages.splice(index, 1);

@@ -234,6 +234,10 @@ createApp({
      return element.messages.at(-1).date;
     },
 
+    deleteMessage(index){
+      return this.contacts[index].messages.splice(index, 1);
+     },
+
   },
   computed: {
 // metodo che filtra i nomi che vengono inseriti tramite il binding dell'input

@@ -215,7 +215,7 @@ i {
     min-width: 200px;
 }
 
-.msg.send {
+.msg.sent {
     background-color: #d5f9ba;
     float: right;
 }

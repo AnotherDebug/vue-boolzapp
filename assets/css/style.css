@@ -12,6 +12,7 @@ body {
     height: 100vh;
     background-image: linear-gradient(to bottom, #009688 0px, #009688 120px, #dcdbd1 120px, #d4ddde 100%);
     background-repeat: no-repeat;
+    font-family: 'Lato', sans-serif;
 }
 
 i {

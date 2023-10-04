@@ -224,34 +224,15 @@ createApp({
         this.contattoAttivo.messages.push(this.newReceiveMessage);
       }, 1000);
     },
-    
   },
-  computed:{
-      findContact(){
-        this.contacts.forEach((element, index) => {
-            if (this.contacts[index].name.toLowerCase().includes(this.catchString.toLowerCase())) {
-                this.contacts[index].visible = true;
-                console.log(this.contacts[index].visible);
-            } else {
-                this.contacts[index].visible = false
-                console.log(this.contacts[index].visible);
-            }
-        });
-      },
+  computed: {
 
-      // findContact() {
-      
-      //   if(this.contacts.filter(contact => contact.name.toLowerCase().includes(this.catchString.toLowerCase()))) {
-      //     this.contacts.visible = true;
-      //     console.log(this.contacts.visible);
-      //   }else {
-      //     this.contacts.visible = false;
-      //     console.log(this.contacts.visible);
-      //   }
-      // }
-
-
-
+    findContact() {
+      return this.contacts.filter((contact) =>
+        contact.name.toLowerCase().includes(this.catchString.toLowerCase())
+      );
+    },
+    
   },
   created() {
     this.contattoAttivo = this.contacts[0];

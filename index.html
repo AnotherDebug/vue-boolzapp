@@ -101,7 +101,7 @@
                 <div class="message">
                     <!-- MESSAGGI VISUALIZZATI -->
                     <div v-for="message in contattoAttivo.messages" class="msg"
-                        :class="(message.status === 'sent')? 'send' : 'received' ">
+                        :class="message.status">
                         <p>{{message.message}}</p>
                         <p>{{message.date}}</p>
                     </div>

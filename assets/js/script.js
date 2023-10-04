@@ -230,11 +230,11 @@ createApp({
     },
 
     //Prendo l'ultima data dall'ultimo oggetto messages, con controllo sull'array.
-    getLastDate(element) {
-      if (element.messages.at(-1).date.length > 0) {
-        return element.messages.at(-1).date;
+    getLastDate() {
+      if (this.contattoAttivo.messages.length > 0) {
+        return this.contattoAttivo.messages.at(-1).date;
       } else {
-        return element.messages = "";
+        return "";
       }
     },
 

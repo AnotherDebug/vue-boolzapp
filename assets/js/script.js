@@ -198,6 +198,7 @@ createApp({
           ],
         },
       ],
+      //oggetto vuoto
       contattoAttivo: null,
       newSentMessage: {
         date: "03/10/2023 14:03:22",
@@ -213,28 +214,38 @@ createApp({
     };
   },
   methods: {
+
+    //Creo un nuovo messaggio e lo push ai messaggi di contattoAttivo
     addNewMessage() {
       this.contattoAttivo.messages.push(this.newSentMessage);
+      //dopo averlo inviato mi ritorna un obj a stringa vuota
       this.newSentMessage = {
         date: "03/10/2023 14:03:22",
         message: "",
         status: "sent",
       };
+      //creo un messaggio automatico di risposta che si attiva quando viene evocato addNewMessage dopo un intervallo di un secondo
       setTimeout(() => {
         this.contattoAttivo.messages.push(this.newReceiveMessage);
       }, 1000);
     },
+
+    getLastDate(element){
+     return element.messages.at(-1).date;
+    },
+
   },
   computed: {
-
+// metodo che filtra i nomi che vengono inseriti tramite il binding dell'input
     findContact() {
       return this.contacts.filter((contact) =>
         contact.name.toLowerCase().includes(this.catchString.toLowerCase())
       );
     },
-    
+
   },
   created() {
+    //l'oggetto vuoto assume il valore di contacts a indice 0 e viene creato quando la pagina viene generata.
     this.contattoAttivo = this.contacts[0];
   },
   mounted() {

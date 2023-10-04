@@ -106,14 +106,14 @@
                 </div>
                 <div class="message">
                     <!-- MESSAGGI VISUALIZZATI -->
-                    <div v-for="message in contattoAttivo.messages" class="msg dropdown" :class="message.status">
+                    <div v-for="(message, index) in contattoAttivo.messages" class="msg dropdown" :class="message.status">
                         <i class="fa-solid fa-chevron-down"></i>
                         <p id="text">{{message.message}}</p>
                         <p id="date">{{message.date}}</p>
 
                         <div class="dropdown-content">
                             <p>Message info</p>
-                            <p>Delete message</p>
+                            <p @click="deleteMessage(index)">Delete message</p>
                         </div>
 
                     </div>

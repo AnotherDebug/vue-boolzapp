@@ -202,6 +202,39 @@ i {
     padding-right:45px;
 }
 
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .dropdown-content p:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* /DROPDOWN */
+
 .message.clearfix {
     content: "";
     clear: both;
@@ -209,6 +242,7 @@ i {
   }
 
 .msg {
+    position: relative;
     width: 50%;
     padding-top: 15px;
     padding-left: 15px;
@@ -217,6 +251,19 @@ i {
     margin: 10px;
     border-radius: 5px;
     min-width: 200px;
+}
+
+.msg i {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    font-size: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.msg:hover i {
+    display: block;
 }
 
 .msg.sent {
@@ -229,7 +276,7 @@ i {
     float: left;
 }
 
-.msg p:last-child {
+#date {
 font-size: 8px;
 text-align: end;
 color: gray;

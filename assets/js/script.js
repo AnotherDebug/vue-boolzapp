@@ -229,13 +229,16 @@ createApp({
       }, 1000);
     },
 
+    //Prendo l'ultima data dall'ultimo oggetto messages, con controllo sull'array.
     getLastDate() {
-  if (this.contattoAttivo.messages.length > 0) {
-    return this.contattoAttivo.messages[this.contattoAttivo.messages.length - 1].date;
-  } else {
-    return "";
-  }
-},
+      if (this.contattoAttivo.messages.length > 0) {
+        return this.contattoAttivo.messages[
+          this.contattoAttivo.messages.length - 1
+        ].date;
+      } else {
+        return "";
+      }
+    },
 
     deleteMessage(index) {
       this.contattoAttivo.messages.splice(index, 1);

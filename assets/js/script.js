@@ -214,7 +214,6 @@ createApp({
     };
   },
   methods: {
-
     //Creo un nuovo messaggio e lo push ai messaggi di contattoAttivo
     addNewMessage() {
       this.contattoAttivo.messages.push(this.newSentMessage);
@@ -230,23 +229,21 @@ createApp({
       }, 1000);
     },
 
-    getLastDate(element){
-     return element.messages.at(-1).date;
+    getLastDate(element) {
+      return element.messages.at(-1).date;
     },
 
-    deleteMessage(index){
-      this.contacts[index].messages.splice(index, 1);
-     },
-
+    deleteMessage(index) {
+      this.contattoAttivo.messages.splice(index, 1);
+    },
   },
   computed: {
-// metodo che filtra i nomi che vengono inseriti tramite il binding dell'input
+    // metodo che filtra i nomi che vengono inseriti tramite il binding dell'input
     findContact() {
       return this.contacts.filter((contact) =>
         contact.name.toLowerCase().includes(this.catchString.toLowerCase())
       );
     },
-
   },
   created() {
     //l'oggetto vuoto assume il valore di contacts a indice 0 e viene creato quando la pagina viene generata.
